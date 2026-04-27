@@ -1,30 +1,483 @@
 <mvc:View
-	controllerName="sachinsingh.controller.Main"
-	displayBlock="true"
-	xmlns="sap.m"
 	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	height="100%"
+	xmlns:l="sap.ui.layout"
+	controllerName="sachinsingh.controller.main"
 	xmlns:core="sap.ui.core"
-	core:require="{
-		formatter: 'sachinsingh/model/formatter'
-	}">
-
+>
 	<Page
-		title="{i18n>appTitle}"
-		id="page">
+		id="idPage"
+		title="{i18n>title}"
+		showHeader="false"
+	>
+		<customHeader>
+			<Toolbar>
+				<Button
+					type="Emphasized"
+					icon="sap-icon://employee"
+					press="onBack"
+				/>
+				<Title
+					text="{i18n>appDescription}"
+					level="H1"
+				/>
+				<ToolbarSpacer />
+			</Toolbar>
+		</customHeader>
 		<content>
-			<IllustratedMessage
-				title="{i18n>appTitle}"
-				illustrationType="sapIllus-SuccessHighFive"
-				enableVerticalResponsiveness="true"
-				description="{i18n>appDescription}">
-				<additionalContent>
-					<Button
-						id="helloButton"
-						text="{formatter: 'formatter.formatValue', path: 'i18n>btnText'}"
-						press="sayHello" />
-				</additionalContent>
-			</IllustratedMessage>
+			<FlexBox
+				wrap="Wrap"
+				direction="Column"
+				class="sapUiSmallMargin bottomDarkBorder"
+			>
+				<Text
+					class="bigTitle"
+					text="Sachin Singh"
+				/>
+				<Label
+					class=""
+					text="Senior SAP Technical Consultant"
+				/>
+			</FlexBox>
+			<FlexBox
+				wrap="Wrap"
+				class="sapUiSmallMargin"
+				alignItems="Center"
+				justifyContent="SpaceBetween"
+			>
+				<HBox justifyContent="SpaceBetween">
+					<Avatar
+						src="../assets/Sachin.jpg"
+						class="sapUiTinyMarginEnd"
+						displaySize="L"
+					/>
+					<VBox class="sapUiSmallMargin">
+						<Link text="+91 79 8162 2161" />
+						<Link text="gsachin.developer@gmail.com" />
+					</VBox>
+				</HBox>
+				<VBox>
+					<Label
+						class=""
+						text="Hello! I am Sachin, I am an SAP Full Stack Developer"
+					/>
+					<Label
+						class=""
+						text="Srikalahasthi, Andhra Pradesh, INDIA."
+					/>
+				</VBox>
+				<VBox>
+					<Image
+						class="pointerCursor"
+						src="../assets/linkedin.png"
+						width="20px"
+						press="onLinkedinPress"
+					/>
+				</VBox>
+			</FlexBox>
+			<VBox class="aboutTextBlock">
+				<Text text="Dynamic and results-oriented Senior Technical Analyst with over 3.5 years 
+					of progressive experience in SAP ABAP Development, 
+					SAP Fiori/UI5, OData, CDS Views, and Full-Stack Web Development. 
+					Demonstrated expertise in architecting scalable enterprise applications, 
+					optimizing performance for complex datasets, and 
+					delivering end-to-end Fiori solutions across diverse industries. 
+					Skilled in collaborating with cross-functional teams to drive 
+					digital transformation initiatives and in developing robust 
+					business applications that enhance operational efficiency and elevate user experience." />
+			</VBox>
+			<IconTabBar
+				id="idIconTabBarInlineMode"
+				headerMode="Inline"
+				expanded="{device>/isNoPhone}"
+				class="sapUiResponsiveContentPadding"
+			>
+				<items>
+					<IconTabFilter
+						text="Experience Summary"
+						key="expsum"
+						count="3.5"
+					>
+						<Text text="Currently working with 3.5+ Years of experience in the 
+							Code&amp;Clap Global Services PVT. LTD. as SAP Full Stack Developer. " />
+					</IconTabFilter>
+					<IconTabFilter
+						text="Main Skill Set"
+						key="skills"
+						count="16"
+					>
+						<l:Grid
+							defaultSpan="L3 M6 S12"
+							hSpacing="1"
+							vSpacing="1"
+						>
+							<Text text="SAP ABAP" />
+							<Text text="SAPUI5/FIORI" />
+							<Text text="SAP RAP (Trained)" />
+							<Text text="SAP CAP (Trained)" />
+							<Text text="CDS Views" />
+							<Text text="AMDP Methods" />
+							<Text text="OData Services" />
+							<Text text="Javascript" />
+							<Text text="CSS" />
+							<Text text="ReactJS" />
+							<Text text="NextJS" />
+							<Text text="NodeJS" />
+						</l:Grid>
+					</IconTabFilter>
+					<IconTabFilter
+						text="Industry Exposure"
+						key="inexp"
+						count="4"
+					>
+						<l:Grid
+							defaultSpan="L3 M6 S12"
+							hSpacing="1"
+							vSpacing="1"
+						>
+							<HBox alignItems="Center">
+								<core:Icon
+									src="sap-icon://car-rental"
+									class="size1 sapUiSmallMarginEnd"
+								/>
+								<Text text="Automobile" />
+							</HBox>
+							<HBox alignItems="Center">
+								<core:Icon
+									src="sap-icon://combine"
+									class="size1 sapUiSmallMarginEnd"
+								/>
+								<Text text="Fluid Management Systems" />
+							</HBox>
+							<HBox alignItems="Center">
+								<core:Icon
+									src="sap-icon://machine"
+									class="size1 sapUiSmallMarginEnd"
+								/>
+								<Text text="Heavy Equipment Manufacturing" />
+							</HBox>
+							<HBox alignItems="Center">
+								<core:Icon
+									src="sap-icon://capital-projects"
+									class="size1 sapUiSmallMarginEnd"
+								/>
+								<Text text="Real Estate/Plotted Development" />
+							</HBox>
+						</l:Grid>
+					</IconTabFilter>
+					<IconTabFilter
+						text="Expertise"
+						key="expertise"
+						count="12"
+					>
+						<l:Grid
+							defaultSpan="L3 M6 S12"
+							hSpacing="1"
+							vSpacing="1"
+						>
+							<Text text="Custom ALV Reports" />
+							<Text text="Enhancments (BADI, Customer/User Exits, Implicit, Explicit)" />
+							<Text text="BAPI" />
+							<Text text="CDS Views" />
+							<Text text="Interfaces" />
+							<Text text="Smartforms" />
+							<Text text="Adobe Forms" />
+							<Text text="BDC" />
+							<Text text="Background JOBS" />
+							<Text text="Workflows" />
+							<Text text="OData Services" />
+							<Text text="FIORI Apps" />
+						</l:Grid>
+					</IconTabFilter>
+				</items>
+			</IconTabBar>
+			<Panel
+				expandable="true"
+				expanded="true"
+				headerText="Achievements"
+				width="auto"
+				class="sapUiResponsiveMargin"
+			>
+				<content>
+					<VBox>
+						<Text
+							text="Expertise in RICEFW concepts across functional domains which mainly includes SD, MM, FI"
+							class="bulletlist"
+						/>
+						<Text
+							class="bulletlist"
+							text="Excellent Debugging skills that help in resolving issue by finding the root cause"
+						/>
+						<Text
+							class="bulletlist"
+							text="Excellent Performance Analysing skills that help in designing high performing programs"
+						/>
+						<Text
+							class="bulletlist"
+							text="From the phase of DDD till Post Go-Live Support, profound technical knowledge played a vital role"
+						/>
+						<Text
+							class="bulletlist"
+							text="Worked on FIORI apps from scratch to deployment-ready phase including OData Service with latest approaches"
+						/>
+						<Text
+							class="bulletlist"
+							text="Worked on Single Page/Multi Page Fiori applications"
+						/>
+						<Text
+							class="bulletlist"
+							text="Implemented Split App type FIORI applications"
+						/>
+						<Text
+							class="bulletlist"
+							text="Communicating client’s business requirements by Constructing easy to understand data and process models"
+						/>
+						<Text
+							class="bulletlist"
+							text="Implemented Custom Fiori apps with custom designs and QR Scanners involved"
+						/>
+						<Text
+							class="bulletlist"
+							text="Implemented Warehouse TR &amp; TO creation Procedure using FIORI Apps "
+						/>
+						<Text
+							class="bulletlist"
+							text="Performed Serialised material transfer postings using FIORI App "
+						/>
+					</VBox>
+				</content>
+			</Panel>
+			<Panel
+				expandable="true"
+				expanded="true"
+				headerText="Experience Breakup: Company: Code&amp;Clap Gobal Services PVT. LTD"
+				width="auto"
+				class="sapUiResponsiveMargin"
+			>
+				<content>
+					<Panel
+						headerToolbar="true"
+						expandable="true"
+						expanded="true"
+						headerText="Client: Sany Heavy Industry  Pvt Ltd (Jan 2026 – Till date)"
+						width="auto"
+						class="sapUiResponsiveMargin"
+					>
+						<content>
+							<VBox>
+								<Text text="Role: SAP Technical Consultant" />
+								<Text text="Module: WM" />
+								<Text text="Environment: SAP S/4 HANA" />
+								<Text
+									text="Material Unloading with 103 Movement Type using FIORI App"
+									class="bulletlist"
+								/>
+								<Text
+									text="Pallet Request (105 for GRN Creation &amp; TO Creation) using FIORI App"
+									class="bulletlist"
+								/>
+								<Text
+									text="Pallet Confirmation (TO Confirmation) using FIORI App"
+									class="bulletlist"
+								/>
+								<Text
+									text="Material Unpacking (TO Creation) using FIORI App"
+									class="bulletlist"
+								/>
+								<Text
+									text="Scanning SU &amp; BIN for (TO Confirmation) using FIORI App"
+									class="bulletlist"
+								/>
+								<Text
+									text="New Screen for LM01 to use in RF Gun for TO Create &amp; Confirm Automatically using FIORI App"
+									class="bulletlist"
+								/>
+								<Text
+									text="Smartform for GRN Label Printing"
+									class="bulletlist"
+								/>
+							</VBox>
+						</content>
+					</Panel>
+					<Panel
+						headerToolbar="true"
+						expandable="true"
+						expanded="true"
+						headerText="Client: GSquare Realtors  Pvt Ltd (April 2025 – Dec 2025)"
+						width="auto"
+						class="sapUiResponsiveMargin"
+					>
+						<content>
+							<VBox>
+								<Text text="Role: SAP Technical Consultant" />
+								<Text text="Module: MM, FICO" />
+								<Text text="Environment: SAP Public Cloud" />
+								<Text
+									text="Flexible Workflow Implmentation"
+									class="bulletlist"
+								/>
+								<Text
+									text="PO Approval Strategy Determination using BADI"
+									class="bulletlist"
+								/>
+								<Text
+									text="BRS (Bank Reconcile Statement) Report using custom CDS Views"
+									class="bulletlist"
+								/>
+								<Text
+									text="Custom CDS views using Key User Extensibility"
+									class="bulletlist"
+								/>
+								<Text
+									text="FIORI Application for listing out vendor details"
+									class="bulletlist"
+								/>
+								<Text
+									text="Adobe Form Customization based on document type"
+									class="bulletlist"
+								/>
+								<Text
+									text="Deployed FIORI App on through BTP instance"
+									class="bulletlist"
+								/>
+								<Text
+									text="Implemented Communication Scenario for OData access"
+									class="bulletlist"
+								/>
+							</VBox>
+						</content>
+					</Panel>
+				</content>
+				<Panel
+					headerToolbar="true"
+					expandable="true"
+					expanded="true"
+					headerText="Client: C.R.I Pumps Pvt Ltd. (May 2023 – April 2025)"
+					width="auto"
+					class="sapUiResponsiveMargin"
+				>
+					<content>
+						<VBox>
+							<Text text="Role: SAP Technical Consultant" />
+							<Text text="Module: SD, MM, FICO" />
+							<Text text="Environment: SAP S/4HANA" />
+							<Text
+								text="Enhancement while creating PO"
+								class="bulletlist"
+							/>
+							<Text
+								text="Implemented a custom program to process IDoc orders everyday"
+								class="bulletlist"
+							/>
+							<Text
+								text="Performance improvement over Inbound IDoc dependent FM"
+								class="bulletlist"
+							/>
+							<Text
+								text="Redesigned OO Report for old procedural report"
+								class="bulletlist"
+							/>
+							<Text
+								text="FIORI Application for listing out vendor details"
+								class="bulletlist"
+							/>
+							<Text
+								text="Summary and Detailed report display for Sales orders"
+								class="bulletlist"
+							/>
+							<Text
+								text="Performance tuning to many programs"
+								class="bulletlist"
+							/>
+							<Text
+								text="Created a custom FIORI app from scratch to provide camera scanner on screen for input of Bin. Once Bin details are fetched from scanner, OData calls will be performed based on user inputs for further proceedings. "
+								class="bulletlist"
+							/>
+							<Text
+								text="Created custom reports for customer ageing, vendor ageing, asset ledger, customer ledger and other FI reports"
+								class="bulletlist"
+							/>
+							<Text
+								text="FIORI application for performing outbound delivery. Implemented mass data pushing approach by utilizing JSON object pattern."
+								class="bulletlist"
+							/>
+							<Text
+								text="Implemented lock-object in custom FIORI app for providing consistency of data between FIORI app and SAP GUI using soft state in OData service."
+								class="bulletlist"
+							/>
+							<Text
+								text="Fiori List Report and Navigate to Object Page applications."
+								class="bulletlist"
+							/>
+						</VBox>
+					</content>
+				</Panel>
+				<Panel
+					headerToolbar="true"
+					expandable="true"
+					expanded="true"
+					headerText="Client: TKM(Toyota Kirloskar Motor) (June 2022 – April 2023)"
+					width="auto"
+					class="sapUiResponsiveMargin"
+				>
+					<content>
+						<VBox>
+							<Text text="Role: SAP Technical Consultant" />
+							<Text text="Module: SD, MM, FICO" />
+							<Text text="Environment: SAP S/4HANA" />
+							<Text
+								text="Smart form &amp; Adobe form changes to have QR-Code as part of GST implementation"
+								class="bulletlist"
+							/>
+							<Text
+								text="Created custom report program to fetch huge material document data part-by-part using cursors "
+								class="bulletlist"
+							/>
+							<Text
+								text="Adobe Forms developed to print Invoices along with the Digital Signature"
+								class="bulletlist"
+							/>
+							<Text
+								text="Report designing using OO ALV"
+								class="bulletlist"
+							/>
+							<Text
+								text="GRN Summary and various Programs in SAP HANA system to improve performance to run crores of records"
+								class="bulletlist"
+							/>
+							<Text
+								text="Worked in AMS team, supported many objects and handled P1 issues"
+								class="bulletlist"
+							/>
+							<Text
+								text="Goods Transfer Posting Fiori applications from One Bin to Another Bin, Bin to different Location, One Location to different Location, Location to Bin. Implemented Scanner for getting data of material and bins. Valid Material will be migrated with serial no’s attached to the destinations provided in input screen."
+								class="bulletlist"
+							/>
+							<Text
+								text="Created a custom FIORI app from scratch to provide camera scanner on screen for input of Bin. Once Bin details are fetched from scanner, OData calls will be performed based on user inputs for further proceedings. "
+								class="bulletlist"
+							/>
+							<Text
+								text="Created custom reports for customer ageing, vendor ageing, asset ledger, customer ledger and other FI reports"
+								class="bulletlist"
+							/>
+							<Text
+								text="FIORI application for performing outbound delivery. Implemented mass data pushing approach by utilizing JSON object pattern."
+								class="bulletlist"
+							/>
+							<Text
+								text="Implemented lock-object in custom FIORI app for providing consistency of data between FIORI app and SAP GUI using soft state in OData service."
+								class="bulletlist"
+							/>
+							<Text
+								text="Fiori List Report and Navigate to Object Page applications."
+								class="bulletlist"
+							/>
+						</VBox>
+					</content>
+				</Panel>
+			</Panel>
 		</content>
 	</Page>
-
 </mvc:View>

@@ -1,0 +1,23 @@
+.bigTitle {
+	font-size: 1.5rem !important;
+	font-weight: bold;
+}
+.bottomDarkBorder {
+	border-bottom: 1px solid #2e3742 !important ;
+}
+.pointerCursor {
+	cursor: pointer !important;
+}
+.aboutTextBlock {
+	border-bottom: 1px solid #2e3742 !important ;
+	padding: 2rem !important;
+}
+.aboutTextBlock .sapMText {
+	font-size: 0.9rem !important;
+}
+.bulletlist {
+	display: list-item !important;
+	list-style-type: disc !important;
+	list-style-position: outside !important;
+	margin-left: 20px;
+}
