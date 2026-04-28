@@ -77,15 +77,17 @@
 				</VBox>
 			</FlexBox>
 			<VBox class="aboutTextBlock">
-				<Text text="Dynamic and results-oriented Senior Technical Analyst with over 3.5 years 
-					of progressive experience in SAP ABAP Development, 
-					SAP Fiori/UI5, OData, CDS Views, and Full-Stack Web Development. 
-					Demonstrated expertise in architecting scalable enterprise applications, 
-					optimizing performance for complex datasets, and 
-					delivering end-to-end Fiori solutions across diverse industries. 
-					Skilled in collaborating with cross-functional teams to drive 
-					digital transformation initiatives and in developing robust 
-					business applications that enhance operational efficiency and elevate user experience." />
+				<Text
+					text="of progressive experience in SAP ABAP Development, 
+						SAP Fiori/UI5, OData, CDS Views, and Full-Stack Web Development. 
+						Demonstrated expertise in architecting scalable enterprise applications, 
+						optimizing performance for complex datasets, and 
+						delivering end-to-end Fiori solutions across diverse industries. 
+						Skilled in collaborating with cross-functional teams to drive 
+						digital transformation initiatives and in developing robust 
+						business applications that enhance operational efficiency and elevate user experience."
+					id="aboutMe"
+				/>
 			</VBox>
 			<IconTabBar
 				id="idIconTabBarInlineMode"
@@ -95,12 +97,29 @@
 			>
 				<items>
 					<IconTabFilter
-						text="Experience Summary"
-						key="expsum"
-						count="3.5"
+						text="Expertise"
+						key="expertise"
+						count="12"
 					>
-						<Text text="Currently working with 3.5+ Years of experience in the 
-							Code&amp;Clap Global Services PVT. LTD. as SAP Full Stack Developer. " />
+						<l:Grid
+							class="sapUiSmallMargin"
+							defaultSpan="L3 M6 S12"
+							hSpacing="1"
+							vSpacing="1"
+						>
+							<Text text="Custom ALV Reports" />
+							<Text text="Enhancments (BADI, Customer/User Exits, Implicit, Explicit)" />
+							<Text text="BAPI" />
+							<Text text="CDS Views" />
+							<Text text="Interfaces" />
+							<Text text="Smartforms" />
+							<Text text="Adobe Forms" />
+							<Text text="BDC" />
+							<Text text="Background JOBS" />
+							<Text text="Workflows" />
+							<Text text="OData Services" />
+							<Text text="FIORI Apps" />
+						</l:Grid>
 					</IconTabFilter>
 					<IconTabFilter
 						text="Main Skill Set"
@@ -108,7 +127,8 @@
 						count="16"
 					>
 						<l:Grid
-							defaultSpan="L3 M6 S12"
+							class="sapUiSmallMargin"
+							defaultSpan="L3 M6 S6"
 							hSpacing="1"
 							vSpacing="1"
 						>
@@ -132,6 +152,7 @@
 						count="4"
 					>
 						<l:Grid
+							class="sapUiSmallMargin"
 							defaultSpan="L3 M6 S12"
 							hSpacing="1"
 							vSpacing="1"
@@ -167,28 +188,16 @@
 						</l:Grid>
 					</IconTabFilter>
 					<IconTabFilter
-						text="Expertise"
-						key="expertise"
-						count="12"
+						text="Experience Summary"
+						id="expsum"
+						key="expsum"
+						count="3.5"
 					>
-						<l:Grid
-							defaultSpan="L3 M6 S12"
-							hSpacing="1"
-							vSpacing="1"
-						>
-							<Text text="Custom ALV Reports" />
-							<Text text="Enhancments (BADI, Customer/User Exits, Implicit, Explicit)" />
-							<Text text="BAPI" />
-							<Text text="CDS Views" />
-							<Text text="Interfaces" />
-							<Text text="Smartforms" />
-							<Text text="Adobe Forms" />
-							<Text text="BDC" />
-							<Text text="Background JOBS" />
-							<Text text="Workflows" />
-							<Text text="OData Services" />
-							<Text text="FIORI Apps" />
-						</l:Grid>
+						<Text
+							class="sapUiSmallMargin"
+							text="Currently working with 3.5+ Years of experience in the 
+								Code&amp;Clap Global Services PVT. LTD. as SAP Full Stack Developer. "
+						/>
 					</IconTabFilter>
 				</items>
 			</IconTabBar>
@@ -245,6 +254,10 @@
 							class="bulletlist"
 							text="Performed Serialised material transfer postings using FIORI App "
 						/>
+						<Text
+							class="bulletlist"
+							text="Implemented Multiple QR Scans with a Single click using FIORI App, which was not available in SAPUI5 SDK "
+						/>
 					</VBox>
 				</content>
 			</Panel>
@@ -257,7 +270,6 @@
 			>
 				<content>
 					<Panel
-						headerToolbar="true"
 						expandable="true"
 						expanded="true"
 						headerText="Client: Sany Heavy Industry  Pvt Ltd (Jan 2026 – Till date)"
@@ -301,7 +313,6 @@
 						</content>
 					</Panel>
 					<Panel
-						headerToolbar="true"
 						expandable="true"
 						expanded="true"
 						headerText="Client: GSquare Realtors  Pvt Ltd (April 2025 – Dec 2025)"
@@ -350,7 +361,6 @@
 					</Panel>
 				</content>
 				<Panel
-					headerToolbar="true"
 					expandable="true"
 					expanded="true"
 					headerText="Client: C.R.I Pumps Pvt Ltd. (May 2023 – April 2025)"
@@ -414,7 +424,6 @@
 					</content>
 				</Panel>
 				<Panel
-					headerToolbar="true"
 					expandable="true"
 					expanded="true"
 					headerText="Client: TKM(Toyota Kirloskar Motor) (June 2022 – April 2023) "
