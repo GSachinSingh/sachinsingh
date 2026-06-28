@@ -187,18 +187,6 @@
 							</HBox>
 						</l:Grid>
 					</IconTabFilter>
-					<IconTabFilter
-						text="Experience Summary"
-						id="expsum"
-						key="expsum"
-						count="3.5"
-					>
-						<Text
-							class="sapUiSmallMargin"
-							text="Currently working with 3.5+ Years of experience in the 
-								Code&amp;Clap Global Services PVT. LTD. as SAP Full Stack Developer. "
-						/>
-					</IconTabFilter>
 				</items>
 			</IconTabBar>
 			<Panel
