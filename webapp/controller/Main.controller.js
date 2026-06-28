@@ -12,7 +12,6 @@ sap.ui.define(
 				this.getView()
 					.byId("aboutMe")
 					.setText(this.aboutMe + aboutText);
-				this.getView().byId("expsum").setProperty("count", result);
 			},
 			// Controller.js
 			calculateExperience: function (startDateStr) {
